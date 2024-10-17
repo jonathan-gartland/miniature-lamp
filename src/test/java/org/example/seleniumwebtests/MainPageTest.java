@@ -26,14 +26,14 @@ public class MainPageTest {
         SelenideLogger.addListener("allure", new AllureSelenide());
     }
 
-//    @BeforeEach
-//    public void setUp() {
-////        DesiredCapabilities cap = new DesiredCapabilities();
-////        // Fix the issue https://github.com/SeleniumHQ/selenium/issues/11750
-////        Configuration.browserCapabilities = new ChromeOptions().addArguments("--remote-allow-origins=*").setExperimentalOption("excludeSwitches", List.of("disable-popup-blocking"));
-////        cap.setCapability(ChromeOptions.CAPABILITY, Configuration.browserCapabilities);
-////        open("https://the-internet.herokuapp.com/");
-//    }
+    @BeforeEach
+    public void setUp() {
+        DesiredCapabilities cap = new DesiredCapabilities();
+        // Fix the issue https://github.com/SeleniumHQ/selenium/issues/11750
+        Configuration.browserCapabilities = new ChromeOptions().addArguments("--remote-allow-origins=*").setExperimentalOption("excludeSwitches", List.of("disable-popup-blocking"));
+        cap.setCapability(ChromeOptions.CAPABILITY, Configuration.browserCapabilities);
+        // open("https://the-internet.herokuapp.com/");
+    }
 
     @Test
     public void search() {
